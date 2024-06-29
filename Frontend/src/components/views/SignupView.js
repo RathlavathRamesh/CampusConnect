@@ -4,9 +4,9 @@ import {
   Stack,
   TextField,
   Typography,
-  Link,
   Alert,
 } from "@mui/material";
+import { Link } from 'react-router-dom';
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { signup } from "../../api/users";
@@ -83,7 +83,7 @@ const SignupView = () => {
           Sign Up
         </Typography>
         <Typography color="text.secondary">
-          Already have an account? <Link to="/login">Login</Link>
+          Already have an account? <Link to="/login" sx={{ cursor: 'pointer' }}>Login</Link>
         </Typography>
         <Box component="form" onSubmit={handleSubmit}>
           <TextField
